@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 My Cute Diary 🌸</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌸 My Cute Diary 🌸</h1>
+        <input type="date" id="entryDate">
+        <textarea id="diaryEntry" placeholder="Write your thoughts here... 😊" oninput="predictMood()"></textarea>
+        <button onclick="saveEntry()">💾 Save Entry</button>
+        <p id="status"></p>
+        <p id="mood">😃 Mood: Unknown</p>
+    </div>
+
+    <!-- 🎀 Custom Modal -->
+    <div id="myModal" class="modal">
+        <h2>🌸 My Cute Diary says 🌸</h2>
+        <p>📜 Your diary entry is empty!</p>
+        <button onclick="closeModal()">OK</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

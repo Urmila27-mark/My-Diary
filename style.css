@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@300;400;600&display=swap');
+
+/* 🌈 Background & Centering */
+body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(135deg, #ffe6ea, #fad0c4);
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+}
+
+/* 📖 Diary Box */
+.container {
+    width: 90%;
+    max-width: 450px;
+    background: #fff9f3;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(255, 75, 110, 0.25);
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🌸 Title */
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #ff4b6e;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(255, 75, 110, 0.3);
+}
+
+/* ✍ Inputs & Textarea */
+input, textarea, button {
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #ffbdd1;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+    font-family: 'Nunito', sans-serif;
+    box-shadow: inset 0 0 6px rgba(255, 75, 110, 0.1);
+}
+
+input {
+    background: #fff0f3;
+    font-weight: bold;
+    text-align: center;
+}
+
+textarea {
+    height: 150px;
+    background: #fff8e1;
+    resize: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff4b6e;
+    outline: none;
+    box-shadow: 0 0 12px rgba(255, 75, 110, 0.4);
+}
+
+/* 💖 Save Button */
+button {
+    background: linear-gradient(135deg, #ff4b6e, #ff85a2);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    box-shadow: 0 4px 12px rgba(255, 75, 110, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff2d56, #ff6b89);
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(255, 75, 110, 0.4);
+}
+
+/* 😍 Mood Display */
+#mood {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ffe5ec, #ffbdd1);
+    color: #ff4b6e;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+
+/* ✅ Save Status */
+#status {
+    color: green;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* 🎀 Custom Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: #fff9f3;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(255, 75, 110, 0.3);
+    text-align: center;
+    padding: 20px;
+}
+
+.modal h2 {
+    font-family: 'Pacifico', cursive;
+    color: #ff4b6e;
+    font-size: 22px;
+}
+
+.modal p {
+    font-size: 16px;
+    color: #333;
+}
+
+.modal button {
+    background: #ff4b6e;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.modal button:hover {
+    background: #ff2d56;
+}
